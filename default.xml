@@ -230,9 +230,7 @@
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
-<!--
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
--->
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
@@ -332,8 +330,6 @@
   <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github" revision="refs/heads/jb" />
   <project path="hardware/libhardware_legacy" name="scanno/android_hardware_libhardware_legacy" remote="github" revision="refs/heads/jb" />
   <project path="system/netd" name="scanno/android_system_netd" remote="github" revision="refs/heads/jb"/>
-
-  <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" remote="github" revision="refs/heads/jellybean" />
   <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" remote="github" revision="refs/heads/jellybean"/>
 
 </manifest>
