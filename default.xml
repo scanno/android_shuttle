@@ -7,7 +7,7 @@
   <remote  name="github"
            fetch="git://github.com/"  />
 
-  <default revision="refs/tags/android-4.1.1_r4"
+  <default revision="refs/tags/android-4.1.2_r1"
            remote="aosp"
            sync-j="4" />
 
@@ -230,7 +230,9 @@
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+<!-- Replaced by a patched version based on the CM10 browser
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+-->
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
@@ -312,7 +314,9 @@
   <project path="sdk" name="platform/sdk" />
   <project path="system/bluetooth" name="platform/system/bluetooth" />
   <project path="system/core" name="platform/system/core" />
+<!-- Replaced by CM10 version
   <project path="system/extras" name="platform/system/extras" />
+-->
   <project path="system/media" name="platform/system/media" />
 <!-- Replaced by patched version
   <project path="system/netd" name="platform/system/netd" />
@@ -323,13 +327,21 @@
 <!--
    Below are the patched git projects compared to AOSP
 -->
-  <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github" revision="refs/heads/jb" />
+  <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github" revision="refs/heads/jb" >
+    <copyfile src="files/superuser/superuser.pk8" dest="build/target/product/security/superuser.pk8" />
+    <copyfile src="files/superuser/superuser.x509.pem" dest="build/target/product/security/superuser.x509.pem" />
+  </project>
+  <project path="external/busybox" name="scanno/android_external_busybox" remote="github" revision="refs/heads/jb"/>
   <project path="external/wpa_supplicant_8" name="scanno/android_external_wpa_supplicant_8" remote="github" revision="refs/heads/jb"/>
   <project path="frameworks/av" name="scanno/android_frameworks_av" remote="github" revision="refs/heads/jb"/>
   <project path="frameworks/base" name="scanno/android_frameworks_base" remote="github" revision="refs/heads/jb"/>
   <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github" revision="refs/heads/jb" />
   <project path="hardware/libhardware_legacy" name="scanno/android_hardware_libhardware_legacy" remote="github" revision="refs/heads/jb" />
   <project path="system/netd" name="scanno/android_system_netd" remote="github" revision="refs/heads/jb"/>
+  <project path="packages/apps/Browser" name="scanno/android_packages_apps_Browser" remote="github" revision="refs/heads/jb" />
+  <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" remote="github" revision="refs/heads/jellybean" />
   <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" remote="github" revision="refs/heads/jellybean"/>
+  <project path="system/extras" name="CyanogenMod/android_system_extras" remote="github" revision="refs/heads/jellybean" />
+  <project path="system/su" name="CyanogenMod/android_system_su" remote="github" revision="refs/heads/jellybean" />
 
 </manifest>
