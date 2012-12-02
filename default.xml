@@ -4,6 +4,10 @@
   <remote  name="aosp"
            fetch=".."
            review="https://android-review.googlesource.com/" />
+
+  <remote  name="github"
+           fetch="git://github.com/"  />
+
   <default revision="refs/tags/android-4.2.1_r1"
            remote="aosp"
            sync-j="4" />
