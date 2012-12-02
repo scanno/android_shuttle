@@ -191,13 +191,13 @@
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" />
   <project path="external/wpa_supplicant_6" name="platform/external/wpa_supplicant_6" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" />
+<!--  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" /> -->
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="platform/external/yaffs2" />
   <project path="external/zlib" name="platform/external/zlib" />
   <project path="external/zxing" name="platform/external/zxing" />
-  <project path="frameworks/av" name="platform/frameworks/av" />
+<!--  <project path="frameworks/av" name="platform/frameworks/av" /> -->
   <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" />
   <project path="frameworks/compile/linkloader" name="platform/frameworks/compile/linkloader" />
@@ -207,7 +207,7 @@
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
-  <project path="frameworks/native" name="platform/frameworks/native" />
+<!--  <project path="frameworks/native" name="platform/frameworks/native" /> -->
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
@@ -273,7 +273,7 @@
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
-  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
+<!--  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" /> -->
   <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
@@ -334,12 +334,34 @@
   <project path="sdk" name="platform/sdk" />
   <project path="system/bluetooth" name="platform/system/bluetooth" />
   <project path="system/core" name="platform/system/core" />
-  <project path="system/extras" name="platform/system/extras" />
+<!--  <project path="system/extras" name="platform/system/extras" /> -->
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
   <project path="system/security" name="platform/system/security" />
   <project path="system/vold" name="platform/system/vold" />
   <project path="tools/build" name="platform/tools/build" groups="toolsbuild" />
   <project path="tools/motodev" name="platform/tools/motodev" />
+
+<!--
+   Below are the patched git projects compared to AOSP
+-->
+  <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github" revision="refs/heads/jb4.2" >
+    <copyfile src="files/superuser/superuser.pk8" dest="build/target/product/security/superuser.pk8" />
+    <copyfile src="files/superuser/superuser.x509.pem" dest="build/target/product/security/superuser.x509.pem" />
+  </project>
+  <project path="external/busybox" name="scanno/android_external_busybox" remote="github" revision="refs/heads/jb4.2"/>
+  <project path="external/wpa_supplicant_8" name="scanno/android_external_wpa_supplicant_8" remote="github" revision="refs/heads/jb4.2"/>
+  <project path="frameworks/av" name="scanno/android_frameworks_av" remote="github" revision="refs/heads/jb4.2"/>
+  <project path="frameworks/native" name="scanno/android_frameworks_native" remote="github" revision="refs/heads/jb4.2"/>
+<!--  <project path="frameworks/base" name="scanno/android_frameworks_base" remote="github" revision="refs/heads/jb"/> -->
+  <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github" revision="refs/heads/jb" />
+<!--  <project path="hardware/libhardware_legacy" name="scanno/android_hardware_libhardware_legacy" remote="github" revision="refs/heads/jb" /> -->
+<!--  <project path="system/netd" name="scanno/android_system_netd" remote="github" revision="refs/heads/jb"/> -->
+<!--  <project path="packages/apps/Browser" name="scanno/android_packages_apps_Browser" remote="github" revision="refs/heads/jb" /> -->
+  <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" remote="github" revision="refs/heads/jellybean" />
+<!--  <project path="packages/inputmethods/LatinIME" name="CyanogenMod/android_packages_inputmethods_LatinIME" remote="github" revision="refs/heads/jellybean"/> -->
+  <project path="system/extras" name="scanno/android_system_extras" remote="github" revision="refs/heads/jb4.2" />
+  <project path="system/su" name="scanno/android_system_su" remote="github" revision="refs/heads/jb4.2" />
+<!--  <project path="prebuilt" name="scanno/android_prebuilt" remote="github" revision="refs/heads/jb4.2" /> -->
 
 </manifest>
