@@ -19,11 +19,7 @@
            sync-c="true"
            sync-j="4" />
 
-<!--  <project path="build" name="CyanogenMod/android_build">
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
--->
-  <project path="build" name="Andromadus/android_build" revision="cm10.1" >
+  <project path="build" name="CyanogenMod/android_build">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -383,5 +379,4 @@
   <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github_scanno" revision="refs/heads/cm10.1" />
   <project path="external/wpa_supplicant_8" name="scanno/android_external_wpa_supplicant_8" remote="github_scanno" revision="refs/heads/cm10.1"/>
   <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github_scanno" revision="refs/heads/cm10.1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-linaro-4.7" name="scanno/android_prebuilts_gcc_linux-x86_arm_arm-eabi-linaro-4.7" remote="github" revision="jellybean" />
 </manifest>
