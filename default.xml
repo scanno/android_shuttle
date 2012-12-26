@@ -19,7 +19,11 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="CyanogenMod/android_build">
+<!--  <project path="build" name="CyanogenMod/android_build">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+-->
+  <project path="build" name="Andromadus/android_build" revision="cm10.1" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
