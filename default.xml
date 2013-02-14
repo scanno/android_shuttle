@@ -276,7 +276,7 @@
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" />
   <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
-  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
+<!--  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" /> -->
   <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
   <project path="packages/apps/Contacts" name="CyanogenMod/android_packages_apps_Contacts" />
   <project path="packages/apps/DeskClock" name="CyanogenMod/android_packages_apps_DeskClock" />
@@ -380,5 +380,8 @@
 <!-- CM10.1 for Shuttle P10an01 changes -->
   <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github_scanno" revision="refs/heads/cm10.1" />
   <project path="external/wpa_supplicant_8" name="scanno/android_external_wpa_supplicant_8" remote="github_scanno" revision="refs/heads/cm10.1"/>
-  <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github_scanno" revision="refs/heads/cm10.1" />
+  <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github_scanno" revision="refs/heads/cm10.1" >
+    <copyfile src="files/vendorsetup.sh" dest="vendor/cm/vendorsetup.sh" />
+  </project>
+  <project path="kernel/nvidia/shuttle" name="scanno/rel-15r7" remote="github_scanno" revision="refs/heads/jb" />
 </manifest>
