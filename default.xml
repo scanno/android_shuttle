@@ -378,7 +378,7 @@
   <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" />
 
 <!-- CM10.1 for Shuttle P10an01 changes -->
-  <project path="bootable/recovery" name="TeamWin/Team-Win-Recovery-Project" remote="github_scanno" revision="refs/heads/twrp2.4"/>
+  <project path="bootable/recovery" name="TeamWin/Team-Win-Recovery-Project" remote="github_scanno" revision="refs/heads/twrp2.5"/>
   <project path="hardware/atheros_wifi_libs" name="scanno/android_hardware_atheros_wifi_libs" remote="github_scanno" revision="refs/heads/cm10.1" />
   <project path="external/wpa_supplicant_8" name="scanno/android_external_wpa_supplicant_8" remote="github_scanno" revision="refs/heads/cm10.1"/>
   <project path="device/nvidia/shuttle" name="scanno/android_device_nvidia_shuttle" remote="github_scanno" revision="refs/heads/cm10.1" >
